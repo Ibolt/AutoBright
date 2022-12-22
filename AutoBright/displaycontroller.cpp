@@ -152,13 +152,6 @@ void DisplayController::captureScreen() {
     image.Attach(hCapBitmap);
     image.Save(L"screen.jpg");
 
-
-    // save bitmap to clipboard
-    //OpenClipboard(NULL);
-    //EmptyClipboard();
-    //SetClipboardData(CF_BITMAP, hCapBitmap);
-    //CloseClipboard();
-
     SelectObject(hDeviceContext, hOldBitmap);
     DeleteDC(hDeviceContext);
     ReleaseDC(NULL, hScreen);
